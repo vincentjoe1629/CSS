@@ -1,0 +1,52 @@
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive GitHub Pages Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">MySite</a>
+            
+          
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+           
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-links">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-links">About</a></li>
+                <!-- Dropdown Item -->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-links drop-trigger">Services <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-links">Web Design</a></li>
+                        <li><a href="#" class="dropdown-links">SEO Marketing</a></li>
+                        <li><a href="#" class="dropdown-links">Hosting</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-links">Portfolio</a></li>
+                <li class="nav-item"><a href="#" class="nav-links">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
